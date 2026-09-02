@@ -1,63 +1,47 @@
 # 🚪 Infrared Door Counter — Arduino UNO
 
-An Arduino UNO project that uses an **infrared (IR) sensor** to detect a person/object crossing a doorway, count each new detection, and activate a buzzer during detection.
+An Arduino UNO project that uses an **IR sensor** to detect objects/persons and count each new detection. A buzzer is activated while an object is detected.
 
 ## 🛠️ Components
-
 - Arduino UNO
-- IR sensor module
+- IR Sensor
 - Buzzer
-- Breadboard
-- Jumper wires
+- Breadboard & Jumper Wires
 
 ## 🔌 Connections
 
-| Component | Arduino UNO |
+| Component | Pin |
 |---|---|
-| IR Sensor Output | Digital Pin 4 |
+| IR Sensor | Digital Pin 4 |
 | Buzzer | Digital Pin 11 |
-| GND | GND |
 
 ## ⚙️ How It Works
 
 The IR sensor is continuously monitored using `digitalRead()`.
 
-When the sensor detects an object (`LOW`):
-
-- The buzzer turns ON.
-- The counter increases only when a **new detection** occurs.
-- The current person count is displayed on the Serial Monitor.
-
-The `previousState` variable prevents the counter from increasing repeatedly while the object remains detected.
-
-### Behavior
-
+- **Object detected (LOW) → Buzzer ON**
 - **New detection → Counter increases by 1**
-- **Object remains detected → Counter does not increase**
+- **Object remains detected → Counter stays unchanged**
 - **No object → Buzzer OFF**
 
-## 🧠 Concepts Practiced
+The `previousState` variable ensures that each detection is counted only once.
 
-- IR sensor interfacing
+The count is displayed on the **Serial Monitor at 9600 baud**.
+
+## 🧠 Concepts
+- IR sensor & object detection
 - Digital input/output
-- Object/person detection
-- Event/state detection
-- Counter implementation
-- `digitalRead()`
-- `digitalWrite()`
-- Serial Monitor
+- State change detection
+- Counter logic
 - Buzzer control
+- Serial Monitor
 
 ## ▶️ How to Run
-
-1. Connect the IR sensor output to **digital pin 4**.
-2. Connect the buzzer to **digital pin 11**.
-3. Open `infrared_door_counter.ino` in Arduino IDE.
-4. Select **Arduino UNO** and the correct COM port.
-5. Upload the code.
-6. Open the Serial Monitor at **9600 baud**.
-7. Pass an object/person through the sensor and observe the counter.
+1. Connect the IR sensor to **pin 4** and the buzzer to **pin 11**.
+2. Upload `infrared_door_counter.ino` to Arduino UNO.
+3. Open Serial Monitor at **9600 baud**.
+4. Place an object/person in front of the sensor and observe the count.
 
 ## 🎯 Learning Outcome
 
-This project demonstrates how an IR sensor can be used to detect movement and maintain a running count using **state-change detection**.
+Learned how to detect and count individual objects using an IR sensor with **state-change detection**.
