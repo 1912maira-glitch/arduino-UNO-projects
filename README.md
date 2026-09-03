@@ -59,6 +59,18 @@ A collection of **20 hands-on Arduino UNO projects** built while learning and pr
 - Distance Measurement
 - Basic Automation
 
+## 🎯 Learning Goal
+
+**These projects were built as hands-on practice to develop a foundation in Arduino programming, electronics, sensor interfacing, and embedded systems.**
+
+**They represent a progression from basic digital I/O to sensor-based control and automation.**
+
+---
+
+## 🔧 Built With
+
+**Arduino UNO • C/C++ • Arduino IDE • Hands-on Electronics & Embedded Systems**
+
 ## 📁 Repository Structure
 
 Each project is organized in its own folder with the Arduino source code and a project-specific README.
