@@ -89,10 +89,9 @@ arduino-UNO-projects/
 │
 └── README.md
 
-🎯 Learning Goal
+## 🎯 Learning Goal
 
 These projects were built as hands-on practice to develop a foundation in Arduino programming, electronics, sensor interfacing, and embedded systems.
-
 They represent a progression from basic digital I/O to sensor-based control and automation.
 
-Built with Arduino UNO, C/C++, and hands-on learning. 🔧🤖
+## Built with Arduino UNO, C/C++, and hands-on learning. 🔧🤖
